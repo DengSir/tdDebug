@@ -1,0 +1,7 @@
+﻿## Interface: 50100
+## Title: tdDebug
+## Author: ldz5
+## Version: 50100.01
+## Dependencies: tdCore
+
+load.xml
