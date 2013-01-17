@@ -13,15 +13,15 @@ local debugs = setmetatable({}, {
 
 function tdDebug:Add(name, ...)
     tinsert(debugs[name], table.concat({...}, ' '))
-    self:UpdateOption()
+    self:GetOption():GetFrame():Update()
 end
 
 function tdDebug:OnInit()
     self:InitOption{ type = 'TabWidget', name = 'Tabs'}
-    self.Tabs = self:GetOptionControl('Tabs')
+    self.Tabs = self:GetOption():GetFrame():GetControl('Tabs')
     
     self:Debug('Debug Init')
-    self:UpdateOption()
+    self:GetOption():GetFrame():Update()
 end
 
 function tdDebug:AddAddon(name)
